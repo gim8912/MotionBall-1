@@ -14,7 +14,9 @@ $(document).ready(function(){
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
 
-		x = Math.round(x);
+		var factor = 3;
+
+		x = Math.round(x * factor);
 
 		var orgX = $("#ball").css("left");
 		orgX = parseFloat(orgX);
@@ -25,7 +27,7 @@ $(document).ready(function(){
 
 		$("#ball").css("left", Math.round(newX));
 
-		y = Math.round(y);
+		y = Math.round(y * factor);
 
 		var orgY = $("#ball").css("top");
 		orgY = parseFloat(orgY);
