@@ -18,12 +18,12 @@ $(document).ready(function(){
 
 		$("#ball").css("left", Math.round(orgX + x));
 
-		z = Math.round(z);
+		y = Math.round(y);
 
-		var orgZ = $("#ball").css("top");
-		orgZ = parseFloat(orgZ);
+		var orgY = $("#ball").css("top");
+		orgY = parseFloat(orgY);
 
-		$("#ball").css("top", Math.round(orgZ + z));
+		$("#ball").css("top", Math.round(orgY + y));
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
