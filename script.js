@@ -12,7 +12,12 @@ $(document).ready(function(){
 		$("#zVal").html(z);
 
 		x = Math.round(x);
-		$("#ball").css({left: "+="+x+"px"});
+
+		var orgX = $("#ball").css("left");
+		orgX = parseFloat(orgX);
+		$("#ball").css({left: orgX + x});
+
+	//	$("#ball").css({left: "+="+x+"px"});
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
