@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$("#yVal").html(y);
 		$("#zVal").html(z);
 
-		$("#ball").animate({left: "+="+x});
+		$("#ball").css({left: "+="+x});
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
