@@ -11,6 +11,7 @@ $(document).ready(function(){
 		$("#yVal").html(y);
 		$("#zVal").html(z);
 
+		x = Math.round(x);
 		$("#ball").css({left: "+="+x+"px"});
 	}
 
