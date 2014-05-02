@@ -22,4 +22,6 @@ $(document).ready(function(){
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 
+	$("#ball").css("left", 30);
+
 });
