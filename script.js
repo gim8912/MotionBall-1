@@ -10,6 +10,8 @@ $(document).ready(function(){
 		$("#xVal").html(x);
 		$("#yVal").html(y);
 		$("#zVal").html(z);
+
+		$("#ball").animate({left: "+="+x});
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
