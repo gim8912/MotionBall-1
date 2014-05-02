@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 		var newY = orgY - y;
 		newY = Math.max(0, newY);
-		newY = Math.max(maxY, newY);
+		newY = Math.min(maxY, newY);
 
 		$("#ball").css("top", Math.round(newY));
 	}
