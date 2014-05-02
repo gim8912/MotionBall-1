@@ -11,8 +11,8 @@ $(document).ready(function(){
 		$("#yVal").html(y);
 		$("#zVal").html(z);
 
-		var maxX = window.innerWidth;
-		var maxY = window.innerHeight;
+		var maxX = window.innerWidth - $("#ball").width();
+		var maxY = window.innerHeight - $("#ball").height();
 
 		x = Math.round(x);
 
@@ -21,6 +21,7 @@ $(document).ready(function(){
 
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
+		newX = Math.min(maxX, newX);
 
 		$("#ball").css("left", Math.round(newX));
 
@@ -30,7 +31,8 @@ $(document).ready(function(){
 		orgY = parseFloat(orgY);
 
 		var newY = orgY - y;
-		var newY = Math.max(0, newY);
+		newY = Math.max(0, newY);
+		newY = Math.max(maxY, newY);
 
 		$("#ball").css("top", Math.round(newY));
 	}
