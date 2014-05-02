@@ -23,7 +23,7 @@ $(document).ready(function(){
 		var orgY = $("#ball").css("top");
 		orgY = parseFloat(orgY);
 
-		$("#ball").css("top", Math.round(orgY + y));
+		$("#ball").css("top", Math.round(orgY - y));
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
