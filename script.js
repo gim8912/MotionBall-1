@@ -15,13 +15,18 @@ $(document).ready(function(){
 
 		var orgX = $("#ball").css("left");
 		orgX = parseFloat(orgX);
-		$("#ball").css({left: orgX + x});
 
-	//	$("#ball").css({left: "+="+x+"px"});
+		$("#ball").css("left": orgX + x);
+
+		z = Math.round(z);
+
+		var orgZ = $("#ball").css("top");
+		orgZ = parseFloat(orgZ);
+
+		$("#ball").css("top": orgZ + z);
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 
-	$("#ball").css("left", 30);
 
 });
